@@ -52,7 +52,7 @@ class DemoTest {
     @Test
     void should_return_locationX_0_locationY_negative_1_direction_S_when_execute_command_given_locationX_0_locationY_0_direction_S_and_M() {
         Application marsRover = new Application(new RoverStatus(0,0,"S"));
-        RoverStatus expectedRoverStatus = new RoverStatus(0,0,"S");
+        RoverStatus expectedRoverStatus = new RoverStatus(0,-1,"S");
 
         marsRover.executeCommand("M");
 
