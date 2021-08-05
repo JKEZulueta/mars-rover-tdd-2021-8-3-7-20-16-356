@@ -52,9 +52,15 @@ public class Application {
     }
 
     private void move() {
-        final int locationX = roverStatus.getLocationX();
-        final int locationY = roverStatus.getLocationY();
+        int locationX = roverStatus.getLocationX();
+        int locationY = roverStatus.getLocationY();
         final String direction = roverStatus.getDirection();
+        if(direction.equals("N")){
+            locationY++;
+        } else if (direction.equals("S")){
+            locationY--;
+        }
+
         roverStatus = new RoverStatus(locationX, locationY + 1, direction);
     }
 
