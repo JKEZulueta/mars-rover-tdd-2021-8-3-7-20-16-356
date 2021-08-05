@@ -85,6 +85,7 @@ public class Application {
     }
 
     public void executeCommands(String commands){
-
+        String[] command = commands.split("");
+        for(String rovers : command) executeCommand(rovers);
     }
 }
