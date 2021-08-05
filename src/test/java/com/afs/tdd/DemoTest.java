@@ -163,7 +163,7 @@ class DemoTest {
         Application marsRover = new Application(new RoverStatus(0,0,"N"));
         RoverStatus expectedRoverStatus = new RoverStatus(-1,1,"N");
 
-        marsRover.executeCommand("MLMR");
+        marsRover.executeCommands("MLMR");
 
         assertEquals(expectedRoverStatus.getLocationX(), marsRover.getRoverStatus().getLocationX());
         assertEquals(expectedRoverStatus.getLocationY(), marsRover.getRoverStatus().getLocationY());

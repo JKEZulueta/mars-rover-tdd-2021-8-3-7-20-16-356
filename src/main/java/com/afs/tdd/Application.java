@@ -83,4 +83,8 @@ public class Application {
     public RoverStatus getRoverStatus() {
         return roverStatus;
     }
+
+    public void executeCommands(String commands){
+
+    }
 }
