@@ -2,9 +2,21 @@ package com.afs.tdd;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 class DemoTest {
     @Test
-    void write_your_first_test() {
+    void should_return_locationX_0_locationY_1_direction_N_when_execute_command_given_locationX_0_locationY_0_direction_N_and_M() {
+
+        //given
+        Application marsRover = new Application(new RoverStatus(0,0,"N"));
+        RoverStatus expectedRoverStatus = new RoverStatus(0,1,"N");
+
+        //when
+        marsRover.executeCommand("M");
+
+        //then
+        assertEquals(expectedRoverStatus.getLocationY(), marsRover.getRoverStatus().getLocationY());
 
     }
 }
