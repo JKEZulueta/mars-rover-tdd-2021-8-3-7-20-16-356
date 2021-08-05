@@ -13,14 +13,20 @@ public class Application {
 
 
     public void executeCommand(String command){
-        if(command.equals("M")){
-            move();
+        switch(command){
+            case "M":
+                move();
+                break;
+            case "L":
+                turnLeft();
+                break;
+            case "R":
+                turnRight();
         }
 
-        if(command.equals("L"))
-        {
-            turnLeft();
-        }
+    }
+
+    private void turnRight() {
     }
 
     private void turnLeft() {
