@@ -29,11 +29,11 @@ class DemoTest {
         RoverStatus expectedRoverStatus = new RoverStatus(0,0,"W");
 
         //when
-
         marsRover.executeCommand("L");
 
-        assertEquals(expectedRoverStatus.getDirection(), marsRover.getRoverStatus().getDirection());
-
         //then
+        assertEquals(expectedRoverStatus.getLocationX(), marsRover.getRoverStatus().getLocationX());
+        assertEquals(expectedRoverStatus.getLocationY(), marsRover.getRoverStatus().getLocationY());
+        assertEquals(expectedRoverStatus.getDirection(), marsRover.getRoverStatus().getDirection());
     }
 }
