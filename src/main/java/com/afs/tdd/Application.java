@@ -63,6 +63,8 @@ public class Application {
             locationY++;
         } else if (direction.equals("S")){
             locationY--;
+        } else if (direction.equals("E")){
+            locationX++;
         }
 
         roverStatus = new RoverStatus(locationX, locationY, direction);
