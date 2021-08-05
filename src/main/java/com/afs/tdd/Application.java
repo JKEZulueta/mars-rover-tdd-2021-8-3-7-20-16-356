@@ -36,6 +36,8 @@ public class Application {
             newDirection = "E";
         } else if(direction.equals("S")){
              newDirection = "W";
+        } else if (direction.equals("E")){
+             newDirection = "S";
         }
         roverStatus = new RoverStatus(locationX, locationY, newDirection);
 
@@ -53,8 +55,8 @@ public class Application {
             newDirection = "E";
         } else if(direction.equals("E")) {
             newDirection = "N";
-        } else if(direction.equals("E")){
-            newDirection = "";
+        } else if(direction.equals("W")){
+            newDirection = "S";
         }
         roverStatus = new RoverStatus(locationX, locationY, newDirection);
     }
@@ -69,6 +71,8 @@ public class Application {
             locationY--;
         } else if (direction.equals("E")){
             locationX++;
+        }else if(direction.equals("W")){
+            locationX--;
         }
 
         roverStatus = new RoverStatus(locationX, locationY, direction);
