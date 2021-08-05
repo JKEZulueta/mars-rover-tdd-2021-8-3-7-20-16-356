@@ -157,4 +157,16 @@ class DemoTest {
         assertEquals(expectedRoverStatus.getLocationY(), marsRover.getRoverStatus().getLocationY());
         assertEquals(expectedRoverStatus.getDirection(), marsRover.getRoverStatus().getDirection());
     }
+
+    @Test
+    void should_return_locationX_negative_1_locationY_1_direction_N_when_execute_command_given_locationX_0_locationY_0_direction_N_and_MLMR() {
+        Application marsRover = new Application(new RoverStatus(0,0,"N"));
+        RoverStatus expectedRoverStatus = new RoverStatus(-1,1,"N");
+
+        marsRover.executeCommand("MLMR");
+
+        assertEquals(expectedRoverStatus.getLocationX(), marsRover.getRoverStatus().getLocationX());
+        assertEquals(expectedRoverStatus.getLocationY(), marsRover.getRoverStatus().getLocationY());
+        assertEquals(expectedRoverStatus.getDirection(), marsRover.getRoverStatus().getDirection());
+    }
 }
