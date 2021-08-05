@@ -61,7 +61,7 @@ public class Application {
             locationY--;
         }
 
-        roverStatus = new RoverStatus(locationX, locationY + 1, direction);
+        roverStatus = new RoverStatus(locationX, locationY, direction);
     }
 
     public RoverStatus getRoverStatus() {
