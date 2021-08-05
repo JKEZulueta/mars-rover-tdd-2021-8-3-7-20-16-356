@@ -71,8 +71,6 @@ public class Application {
             locationY--;
         } else if (direction.equals("E")){
             locationX++;
-        }else if(direction.equals("W")){
-            locationX--;
         }
 
         roverStatus = new RoverStatus(locationX, locationY, direction);
